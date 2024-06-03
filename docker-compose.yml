@@ -1,0 +1,64 @@
+version: "3.8"
+services:
+  database:
+    container_name: pokeweb-db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword21
+      MYSQL_DATABASE: pokeweb
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - pokeweb_default
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: database
+    ports:
+      - "8081:80"
+    networks:
+      - pokeweb_default
+  frontend:
+    build:
+      context: .
+      dockerfile: frontEnd.Dockerfile
+    ports:
+      - "3001:5173"
+    command: 'npm run dev -- --host'
+  backend:
+    depends_on:
+      database:
+        condition: service_started
+    links:
+      - database
+    build:
+      context: .
+      target: building
+      dockerfile: backEnd.Dockerfile
+    command: 'php artisan serve --host=0.0.0.0 && php artisan migrate && php artisan db:seed'
+    env_file:
+      - ./pokeweb_BE-main/.env
+    volumes:
+      - ./pokeweb_BE-main:/app
+      - /app/vendor
+    ports:
+      - "8000:8000"
+    networks:
+      - pokeweb_default
+ 
+  # composer:
+  #   user: "1000:1000"
+  #   build:
+  #     context: ./docker/composer/
+  #     dockerfile: Dockerfile
+  #   working_dir: /var/www/html
+  #   volumes:
+  #     - .:/var/www/html
+  #   command: bash -c "composer install"
+ 
+networks:
+    pokeweb_default:

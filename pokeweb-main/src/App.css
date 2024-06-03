@@ -1,0 +1,454 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-image: url("./components/assets/img/pattern-white.jpg");
+  background-size: contain;
+}
+.customFont {
+  font-family: 'Shantell Sans', sans-serif;
+}
+.customFont2 {
+  font-family: 'Noto Serif', sans-serif;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.autofilled {
+  background-color: transparent !important; /* Imposta lo sfondo trasparente per il valore preimpostato dall'autocompletamento */
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}
+.wallpaper2 {
+  background-image: url(components/assets/img/pokemonlandscape4.jpg);
+}
+.wallpaper3 {
+  background-image: url(components/assets/img/pokemonlandscape3.jpg);
+}
+.wallpaper4 {
+  background-image: url(components/assets/img/pokemonlandscape5.jpg);
+}
+.background {
+  background-image: url(components/assets/img/background.jpg);
+}
+.buttonSite {
+  background-color: #b70909;
+  color: #fff;
+  transition: background-color 1s, color 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.buttonSite:hover {
+  background-color: #fff;
+  color: #b70909;
+  border: 1px solid #b70909;
+}
+
+.buttonSite2 {
+  background-color: #b70909;
+  color: #fff;
+  transition: background-color 1s, color 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.buttonSite2:hover {
+  background-color: #cc4a4a;
+  border: 1px solid #b70909;
+}
+
+.buttonActions {
+  background-color: #b70909;
+  color: white;
+  transition: background-color 1s, color 0.2s;
+}
+.buttonActions:hover {
+  background-color: #e72e2e;
+}
+
+
+
+/* HEADER */
+
+.fullNavbar {
+  background-color: #b70909;
+  width: 100%;
+  height: 100px;
+}
+.navbar {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+}
+.navbarBorder {
+  border-bottom: 2px solid;
+  border-color: black;
+}
+.centralNavbar {
+  margin: 0 auto;
+}
+.iconImage {
+  width: 30px;
+  height: 30px;
+}
+.marginNav {
+  margin-right: 60px !important;
+}
+.navMenu {
+  display: flex;
+}
+
+.navMenu a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navMenu:hover {
+  background: linear-gradient(to bottom, #ffffff00 0%, #fdb426 100%);
+}
+.navActive {
+  background: linear-gradient(to bottom, #ffffff00 0%, #fdb426 100%);
+}
+
+/* FOOTER  */
+
+.fullFooter {
+  background-color: black;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.footer {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  /* background-color: teal; */
+}
+.footerMenu {
+  width: 350px;
+  /* background-color: #FDB426; */
+}
+
+/* HOME */
+
+.backgroundUser {
+  background-image: url('');
+}
+
+.wallpaperHome {
+  background-image: url(components/assets/img/pokemonlandscape2.jpg);
+}
+
+
+.topCard {
+  background-image: url(components/assets/img/Card.jpg);
+  background-repeat: no-repeat;
+}
+
+.inputFieldRandom {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+
+.inputFieldRandom label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.inputFieldRandom input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.inputFieldRandom input:focus ~ label,
+.inputFieldRandom input:valid ~ label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+/* LOGIN / REGISTER */
+
+.loginBackground {
+  background-image: url(components/assets/img/pokemonlandscape.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.registerBackground {
+  background-image: url(components/assets/img/pokemonlandscape2.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapperLogin {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid white;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.wrapperRegister {
+  width: 480px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid white;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+}
+
+.formRegister {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+
+.inputField label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.inputField input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.inputField input:focus ~ label,
+.inputField input:valid ~ label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+.forgetLogin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.forgetRegister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0 35px 0;
+  color: #fff;
+}
+#remember {
+  accent-color: #fff;
+}
+
+.forgetLogin label {
+  display: flex;
+  align-items: center;
+}
+
+.forgetLogin label p {
+  margin-left: 8px;
+}
+
+.forgetRegister label {
+  display: flex;
+  align-items: center;
+}
+
+.forgetRegister label p {
+  margin-left: 8px;
+}
+
+.wrapper a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+.buttonLogin {
+  background-color: #fff !important;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.buttonLogin:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.register {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+.register a {
+  color: greenyellow;
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+}
+
+.login {
+  text-align: center;
+  color: #fff;
+}
+.login a {
+  color: greenyellow;
+  text-underline-offset: 4px;
+  text-decoration-line: underline;
+}
+
+/* POKEDEX PAGE */
+
+.wallpaper1 {
+    background-image: url(components/assets/img/pokemonlandscape.jpg);
+}
+
+/* CHANGES */
+
+
+/* ANIMAZIONI */
+
+.animation {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: animation 1.5s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes animation {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animation2 {
+  opacity: 0;
+  animation: animation2 1.5s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes animation2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animation3 {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: animation3 1.5s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes animation3 {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.animation-user {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: animation-user 1.2s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes animation-user {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
